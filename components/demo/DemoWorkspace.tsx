@@ -56,7 +56,9 @@ export function DemoWorkspace() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-10">
-          <span className="inline-flex items-center gap-2 rounded-full border border-blue-500/20 bg-blue-500/8 px-4 py-1.5 text-sm text-blue-400 font-medium mb-5">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/logo.svg" alt="Sage Assistant" className="h-16 w-auto mx-auto mb-5" />
+          <span className="inline-flex items-center gap-2 rounded-full border border-sage-500/25 bg-sage-500/8 px-4 py-1.5 text-sm text-sage-400 font-medium mb-5">
             <Sparkles className="w-3.5 h-3.5" />
             Interactive Demo
           </span>
@@ -86,7 +88,7 @@ export function DemoWorkspace() {
             />
 
             <div className="flex items-center gap-2 flex-shrink-0">
-              <span className="hidden sm:inline-flex items-center gap-1.5 rounded-full bg-blue-500/8 border border-blue-500/15 px-3 py-1 text-[11px] text-blue-400 font-medium">
+              <span className="hidden sm:inline-flex items-center gap-1.5 rounded-full bg-sage-500/8 border border-sage-500/15 px-3 py-1 text-[11px] text-sage-400 font-medium">
                 <Sparkles className="w-3 h-3" />
                 Renewal Intelligence
               </span>
@@ -114,7 +116,7 @@ export function DemoWorkspace() {
                   {isActive && (
                     <motion.div
                       layoutId="activeTab"
-                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-500 rounded-full"
+                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-sage-500 rounded-full"
                     />
                   )}
                 </button>

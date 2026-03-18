@@ -13,9 +13,9 @@ const features = [
     title: 'Renewal Brief',
     description:
       'Auto-generated account intelligence — ARR, adoption metrics, value highlights, key risks, and a recommended strategy, surfaced 60 days before renewal.',
-    color: 'text-blue-400',
-    bg: 'from-blue-500/8 to-blue-500/3',
-    border: 'border-blue-500/15',
+    color: 'text-sage-400',
+    bg: 'from-sage-500/8 to-sage-500/3',
+    border: 'border-sage-500/15',
     tab: 'brief',
   },
   {
@@ -123,7 +123,7 @@ export function FeaturesStory() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-flex items-center gap-2 rounded-full border border-blue-500/20 bg-blue-500/8 px-4 py-1.5 text-sm text-blue-400 font-medium mb-6">
+          <span className="inline-flex items-center gap-2 rounded-full border border-sage-500/25 bg-sage-500/8 px-4 py-1.5 text-sm text-sage-400 font-medium mb-6">
             The Platform
           </span>
           <h2 className="text-4xl lg:text-5xl font-extrabold text-zinc-100 tracking-tight mb-5">

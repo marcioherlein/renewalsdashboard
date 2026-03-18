@@ -49,7 +49,7 @@ export function HeroSection() {
       {/* Background */}
       <div className="absolute inset-0 bg-zinc-950">
         <div className="absolute inset-0" style={{
-          background: 'radial-gradient(ellipse 70% 60% at 15% 5%, rgba(59,130,246,0.07) 0%, transparent 65%), radial-gradient(ellipse 50% 40% at 85% 90%, rgba(139,92,246,0.06) 0%, transparent 60%)',
+          background: 'radial-gradient(ellipse 70% 60% at 15% 5%, rgba(77,140,98,0.08) 0%, transparent 65%), radial-gradient(ellipse 50% 40% at 85% 90%, rgba(126,145,172,0.06) 0%, transparent 60%)',
         }} />
         {/* Grid lines */}
         <div className="absolute inset-0 opacity-[0.015]" style={{
@@ -58,8 +58,22 @@ export function HeroSection() {
         }} />
       </div>
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 pt-20 pb-16">
-        <div className="grid lg:grid-cols-2 gap-16 items-center min-h-[80vh]">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 pb-16">
+        {/* Logo / nav bar */}
+        <motion.div
+          initial={{ opacity: 0, y: -12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="flex items-center justify-between pt-8 pb-4 mb-8"
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/logo.svg" alt="Sage Assistant" className="h-12 w-auto" />
+          <span className="hidden sm:inline-flex items-center gap-2 rounded-full border border-white/8 bg-white/4 px-4 py-1.5 text-xs text-zinc-500 font-medium">
+            Renewal Intelligence Platform
+          </span>
+        </motion.div>
+
+        <div className="grid lg:grid-cols-2 gap-16 items-center min-h-[75vh]">
           {/* Left — Headline */}
           <div className="flex flex-col gap-8">
             {/* AI badge */}
@@ -68,9 +82,9 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <span className="inline-flex items-center gap-2 rounded-full border border-blue-500/20 bg-blue-500/8 px-4 py-1.5 text-sm text-blue-400 font-medium">
+              <span className="inline-flex items-center gap-2 rounded-full border border-sage-500/25 bg-sage-500/8 px-4 py-1.5 text-sm text-sage-400 font-medium">
                 <Sparkles className="w-3.5 h-3.5" />
-                Renewal Intelligence Platform
+                Powered by Sage Assistant
               </span>
             </motion.div>
 
@@ -85,7 +99,7 @@ export function HeroSection() {
                 Win renewals
               </h1>
               <h1 className="text-5xl lg:text-[64px] font-extrabold leading-[1.05] tracking-tight">
-                <span className="gradient-text-blue">before they become</span>
+                <span className="gradient-text-sage">before they become</span>
               </h1>
               <h1 className="text-5xl lg:text-[64px] font-extrabold leading-[1.05] tracking-tight text-zinc-100">
                 negotiations.
@@ -113,7 +127,7 @@ export function HeroSection() {
             >
               <button
                 onClick={scrollToDemo}
-                className="inline-flex items-center gap-2 rounded-xl bg-blue-500 hover:bg-blue-400 text-white px-6 py-3 text-sm font-semibold transition-all duration-200 hover:shadow-glow-blue hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 rounded-xl bg-sage-600 hover:bg-sage-500 text-white px-6 py-3 text-sm font-semibold transition-all duration-200 hover:shadow-glow-sage hover:-translate-y-0.5"
               >
                 <Zap className="w-4 h-4" />
                 View Demo Account
@@ -155,8 +169,8 @@ export function HeroSection() {
             {/* Central orb */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full"
               style={{
-                background: 'radial-gradient(circle, rgba(59,130,246,0.08) 0%, transparent 70%)',
-                boxShadow: '0 0 80px rgba(59,130,246,0.06)',
+                background: 'radial-gradient(circle, rgba(77,140,98,0.10) 0%, transparent 70%)',
+                boxShadow: '0 0 80px rgba(77,140,98,0.07)',
               }}
             />
 
@@ -191,7 +205,6 @@ export function HeroSection() {
                   <p className="text-[10px] text-zinc-500 mt-0.5">Risk</p>
                 </div>
               </div>
-              {/* Mini risk bar */}
               <div className="space-y-1.5">
                 <div className="flex items-center justify-between text-[11px]">
                   <span className="text-zinc-500">Risk Trend</span>
@@ -205,11 +218,7 @@ export function HeroSection() {
 
             {/* Floating metric cards */}
             {floatingCards.map((card, i) => {
-              const positions = [
-                'top-8 right-0',
-                'bottom-24 right-4',
-                'bottom-8 left-4',
-              ]
+              const positions = ['top-8 right-0', 'bottom-24 right-4', 'bottom-8 left-4']
               const Icon = card.icon
               return (
                 <motion.div
@@ -221,7 +230,7 @@ export function HeroSection() {
                   style={{ animation: `float ${6 + i}s ease-in-out ${i * 0.7}s infinite` }}
                 >
                   <div className={`rounded-xl border ${card.border} bg-gradient-to-br ${card.bg} backdrop-blur-xl p-3 flex items-center gap-3 min-w-[160px] shadow-glass`}>
-                    <div className={`rounded-lg bg-zinc-900/60 p-2`}>
+                    <div className="rounded-lg bg-zinc-900/60 p-2">
                       <Icon className={`w-4 h-4 ${card.color}`} />
                     </div>
                     <div>
@@ -242,9 +251,9 @@ export function HeroSection() {
               className="absolute top-1/2 left-0 -translate-y-8 z-20"
               style={{ animation: 'float 7s ease-in-out 1s infinite' }}
             >
-              <div className="rounded-xl border border-blue-500/20 bg-blue-500/8 backdrop-blur-xl p-3 flex items-center gap-2">
-                <Sparkles className="w-3.5 h-3.5 text-blue-400" />
-                <span className="text-xs text-blue-400 font-medium">AI-Generated Brief</span>
+              <div className="rounded-xl border border-sage-500/25 bg-sage-500/8 backdrop-blur-xl p-3 flex items-center gap-2">
+                <Sparkles className="w-3.5 h-3.5 text-sage-400" />
+                <span className="text-xs text-sage-400 font-medium">AI-Generated Brief</span>
               </div>
             </motion.div>
           </div>

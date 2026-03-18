@@ -35,7 +35,7 @@ export function RenewalBrief({ account }: Props) {
           </div>
         </div>
         <div className="flex items-center gap-2">
-          <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-500/8 border border-blue-500/15 px-3 py-1 text-[11px] text-blue-400 font-medium">
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-sage-500/8 border border-sage-500/15 px-3 py-1 text-[11px] text-sage-400 font-medium">
             <Sparkles className="w-3 h-3" />
             AI Generated
           </span>
@@ -161,11 +161,11 @@ export function RenewalBrief({ account }: Props) {
           initial={{ opacity: 0, x: 12 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.25 }}
-          className="rounded-xl border border-blue-500/15 bg-blue-500/5 p-5"
+          className="rounded-xl border border-sage-500/15 bg-sage-500/5 p-5"
         >
           <div className="flex items-center gap-2 mb-3">
-            <Sparkles className="w-3.5 h-3.5 text-blue-400" />
-            <h4 className="text-sm font-semibold text-blue-300">Recommended Strategy</h4>
+            <Sparkles className="w-3.5 h-3.5 text-sage-400" />
+            <h4 className="text-sm font-semibold text-sage-300">Recommended Strategy</h4>
           </div>
           <p className="text-sm text-zinc-400 leading-relaxed">{brief.recommendedStrategy}</p>
         </motion.div>

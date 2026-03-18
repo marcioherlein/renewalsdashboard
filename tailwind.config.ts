@@ -16,6 +16,19 @@ const config: Config = {
           DEFAULT: '#18181b',
           elevated: '#1c1c1f',
         },
+        // Sage Assistant brand palette
+        sage: {
+          50:  '#f0f7f2',
+          100: '#d8edde',
+          200: '#b4d9be',
+          300: '#8cc59e',
+          400: '#6daf82',   // light text / badges
+          500: '#4d8c68',   // primary accent
+          600: '#3d7055',   // button / hover
+          700: '#2d5540',   // dark
+          800: '#1e3a2b',
+          900: '#0f2016',
+        },
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -38,10 +51,11 @@ const config: Config = {
         },
       },
       boxShadow: {
-        'glow-blue': '0 0 40px rgba(59, 130, 246, 0.15)',
-        'glow-red': '0 0 40px rgba(239, 68, 68, 0.15)',
+        'glow-sage':    '0 0 40px rgba(77, 140, 104, 0.18)',
+        'glow-blue':    '0 0 40px rgba(59, 130, 246, 0.15)',
+        'glow-red':     '0 0 40px rgba(239, 68, 68, 0.15)',
         'glow-emerald': '0 0 40px rgba(16, 185, 129, 0.12)',
-        'glass': '0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255,255,255,0.06)',
+        'glass':        '0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255,255,255,0.06)',
       },
     },
   },

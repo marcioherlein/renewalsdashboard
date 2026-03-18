@@ -33,9 +33,18 @@ export function CTASection() {
             <motion.div
               initial={{ opacity: 0, y: 12 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.05 }}
+              className="flex justify-center mb-6"
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/logo.svg" alt="Sage Assistant" className="h-20 w-auto" />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 12 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              <span className="inline-flex items-center gap-2 rounded-full border border-blue-500/20 bg-blue-500/8 px-4 py-1.5 text-sm text-blue-400 font-medium mb-8">
+              <span className="inline-flex items-center gap-2 rounded-full border border-sage-500/25 bg-sage-500/8 px-4 py-1.5 text-sm text-sage-400 font-medium mb-8">
                 <Sparkles className="w-3.5 h-3.5" />
                 Ready to transform your renewals?
               </span>
@@ -48,7 +57,7 @@ export function CTASection() {
               className="text-4xl lg:text-5xl font-extrabold text-zinc-100 tracking-tight mb-5 leading-tight"
             >
               Stop reacting.<br />
-              <span className="gradient-text-blue">Start winning.</span>
+              <span className="gradient-text-sage">Start winning.</span>
             </motion.h2>
 
             <motion.p
@@ -68,7 +77,7 @@ export function CTASection() {
               transition={{ duration: 0.5, delay: 0.28 }}
               className="flex flex-wrap items-center justify-center gap-4"
             >
-              <button className="inline-flex items-center gap-2 rounded-xl bg-blue-500 hover:bg-blue-400 text-white px-7 py-3.5 text-sm font-semibold transition-all duration-200 hover:shadow-glow-blue hover:-translate-y-0.5">
+              <button className="inline-flex items-center gap-2 rounded-xl bg-sage-600 hover:bg-sage-500 text-white px-7 py-3.5 text-sm font-semibold transition-all duration-200 hover:shadow-glow-sage hover:-translate-y-0.5">
                 <Calendar className="w-4 h-4" />
                 Book a Demo
               </button>
